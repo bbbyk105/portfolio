@@ -16,16 +16,68 @@ canvas {
 }
 
 .header {
-  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navHeight;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
 
   &__inner {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width
+    
+  }
+
+  &__nav {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: cover;
+    text-align: center;
+
+    display: none;
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__li {
+    margin: 10px;
+
+    @include mq(md) {
+      margin-left: 30px;
+      margin-right: 0;
+    }
+
+    & > a {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  & .logo {
+    justify-content: center;
+
+    @include mq(md) {
+      font-size: 35px;
+      justify-content: flex-start;
+    }
   }
 }
 
-.swiper {
-  width: 600px;
-  height: 300px;
-}
+// .swiper {
+//   width: 600px;
+//   height: 300px;
+// }
