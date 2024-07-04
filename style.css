@@ -132,7 +132,7 @@ canvas {
   z-index: 100;
 }
 .header__inner {
-  position: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -165,6 +165,7 @@ canvas {
 .header__li > a {
   text-decoration: none;
   text-transform: uppercase;
+  color: white;
 }
 .header .logo {
   justify-content: center;
