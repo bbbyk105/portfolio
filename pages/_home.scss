@@ -1,20 +1,17 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-html,
-body,
-canvas {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  color: $cWhite;
+body {
+  background-image: url("../images/bg.png");
+  background-size: cover; /* 画像を全体に表示 */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
 }
 
+.swiper {
+  width: 500px;
+  height: 300px;
+}
 .header {
   position: fixed;
   top: 0;
@@ -25,13 +22,13 @@ canvas {
   display: flex;
   align-items: center;
   z-index: 100;
+  padding-bottom: 80px !important;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @extend .content-width
-    
+    @extend .content-width;
   }
 
   &__nav {
@@ -70,7 +67,6 @@ canvas {
 
   & .logo {
     justify-content: center;
-
     @include mq(md) {
       font-size: 35px;
       justify-content: flex-start;
@@ -78,7 +74,51 @@ canvas {
   }
 }
 
-// .swiper {
-//   width: 600px;
-//   height: 300px;
-// }
+.profile {
+  @extend .content-width;
+  @extend .mb-lg;
+
+  &__inner {
+    @extend .flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    @include mq(md) {
+      padding: 100px;
+    }
+
+    @include mq(lg) {
+      padding: 100px 30px 150px;
+    }
+  }
+
+  &__img {
+    height: 300px;
+    @extend .mb-sm;
+
+    @include mq(md) {
+      flex-basis: 47%;
+    }
+
+    @include mq(lg) {
+      height: 400px;
+    }
+    & > img {
+      opacity: 1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    
+      border: 1px solid green;
+    }
+  }
+  &__texts {
+    @extend .mb-sm;
+
+    @include mq(md) {
+      position:flex;
+      align-items: center;
+      flex-basis: 47%;
+    }
+  }
+}

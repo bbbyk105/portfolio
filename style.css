@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
   color: white;
@@ -8,15 +9,15 @@ img {
   vertical-align: bottom;
 }
 
-.mb-sm {
+.mb-sm, .profile__img, .profile__texts {
   margin-bottom: 16px !important;
 }
 
-.mb-lg {
+.mb-lg, .profile {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg {
+  .mb-lg, .profile {
     margin-bottom: 150px !important;
   }
 }
@@ -34,18 +35,18 @@ img {
   }
 }
 
-.content-width, .header__inner {
+.content-width, .header__inner, .profile {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
 }
 
-.flex, .header__nav {
+.flex, .header__nav, .profile__inner {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex, .header__nav {
+  .flex, .header__nav, .profile__inner {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -106,18 +107,16 @@ img {
   color: #535353;
 }
 
-html,
-body,
-canvas {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  color: white;
+body {
+  background-image: url("../images/bg.png");
+  background-size: cover; /* 画像を全体に表示 */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+}
+
+.swiper {
+  width: 500px;
+  height: 300px;
 }
 
 .header {
@@ -130,6 +129,7 @@ canvas {
   display: flex;
   align-items: center;
   z-index: 100;
+  padding-bottom: 80px !important;
 }
 .header__inner {
   display: flex;
@@ -174,5 +174,48 @@ canvas {
   .header .logo {
     font-size: 35px;
     justify-content: flex-start;
+  }
+}
+
+.profile__inner {
+  justify-content: space-between;
+  padding: 15px;
+}
+@media screen and (min-width: 600px) {
+  .profile__inner {
+    padding: 100px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .profile__inner {
+    padding: 100px 30px 150px;
+  }
+}
+.profile__img {
+  height: 300px;
+}
+@media screen and (min-width: 600px) {
+  .profile__img {
+    flex-basis: 47%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .profile__img {
+    height: 400px;
+  }
+}
+.profile__img > img {
+  opacity: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: 1px solid green;
+}
+@media screen and (min-width: 600px) {
+  .profile__texts {
+    position: flex;
+    align-items: center;
+    flex-basis: 47%;
   }
 }/*# sourceMappingURL=style.css.map */
