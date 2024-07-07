@@ -26,11 +26,11 @@ img {
   padding-bottom: 16px !important;
 }
 
-.pb-lg {
+.pb-lg, .hero {
   padding-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .pb-lg {
+  .pb-lg, .hero {
     padding-bottom: 150px !important;
   }
 }
@@ -115,6 +115,10 @@ img {
   box-sizing: border-box;
 }
 
+.hero {
+  padding-top: 100px;
+}
+
 .swiper {
   width: 500px;
   height: 300px;
@@ -123,7 +127,8 @@ img {
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 80px;
+  position: fixed;
+  top: 0;
 }
 .header__nav {
   max-width: 100%;

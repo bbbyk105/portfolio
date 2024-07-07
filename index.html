@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Byakko's Portfolio</title>
-    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Noto+Sans+JP:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/vendors/css-reset.css" />
+    <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <!-- <canvas id="background-canvas"></canvas>
@@ -21,54 +23,46 @@
 
     <div id="grobal-container">
       <div class="container">
+        <header class="header">
+          <nav class="header__nav">
+            <div class="logo">Portfolio</div>
+            <ul class="header__ul">
+              <li class="header__li"><a class="header__a" href="#">Home</a></li>
+              <li class="header__li">
+                <a class="header__a" href="#">Profile</a>
+              </li>
+              <li class="header__li">
+                <a class="header__a" href="#">Contact</a>
+              </li>
+              <li class="header__li hamburger">
+                <a href="#">
+                  <div class="bar"></div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
         <div id="content">
-          <!-- <header class="header">
-            <div class="header__inner">
-              <div class="logo">
-                <span class="logo__Portfolio">Portfolio</span>
+          <div class="hero">
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
               </div>
-              <div class="header__nav">
-                <ul class="header__ul">
-                  <li class="header__li"><a href="#main-content">Home</a></li>
-                  <li class="header__li"><a href="#">Profile</a></li>
-                  <li class="header__li"><a href="#">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </header> -->
-          <header class="header">
-            <nav class="header__nav">
-              <div class="logo">Portfolio</div>
-              <ul class="header__ul">
-                <li class="header__li"><a class="header__a" href="#">Home</a></li>
-                <li class="header__li"><a class="header__a" href="#">Profile</a></li>
-                <li class="header__li"><a class="header__a" href="#">Contact</a></li>
-                <li class="header__li hamburger">
-                  <a href="#">
-                    <div class="bar"></div>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </header>
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              ...
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
           </div>
           <div id="main-content">
             <main>
@@ -104,8 +98,8 @@
         </div>
       </div>
     </div>
-    <script src="swiper/swiper-bundle.min.js"></script>
-    <script src="swiper/slider.js"></script>
+    <script src="scripts/vendors/swiper-bundle.min.js"></script>
+    <script src="scripts/libs/slider.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

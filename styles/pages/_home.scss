@@ -10,82 +10,28 @@
 }
 
 // body {
-//   // background-image: url("../images/bg.png");
-//   // background-size: cover; /* 画像を全体に表示 */
-//   // background-position: center; /* 画像を中央に配置 */
-//   // background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+//   background-image: url("../images/bg.png");
+//   background-size: cover; /* 画像を全体に表示 */
+//   background-position: center; /* 画像を中央に配置 */
+//   background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
 // }
+.hero {
+  @extend .pb-lg;
+  padding-top: 100px;
+}
 
 .swiper {
   width: 500px;
   height: 300px;
 }
 
-// .header {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: $navHeight;
-//   background: transparent;
-//   display: flex;
-//   align-items: center;
-//   z-index: 100;
-//   padding-bottom: 80px !important;
 
-//   &__inner {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     @extend .content-width;
-//   }
-
-//   &__nav {
-//     @extend .flex;
-//     justify-content: space-between;
-//     align-items: cover;
-//     text-align: center;
-
-//     display: none;
-//     @include mq(lg) {
-//       display: block;
-//     }
-//   }
-
-//   &__ul {
-//     display: flex;
-//     align-items: center;
-//     list-style: none;
-//     padding: 0;
-//   }
-
-//   &__li {
-//     margin: 10px;
-
-//     @include mq(md) {
-//       margin-left: 30px;
-//       margin-right: 0;
-//     }
-
-//     & > a {
-//       text-decoration: none;
-//       text-transform: uppercase;
-//       color: $cWhite;
-//     }
-//   }
-
-//   & .logo {
-//     justify-content: center;
-//     @include mq(md) {
-//       font-size: 35px;
-//       justify-content: flex-start;
-//     }
-//   }
-// }
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 80px;
+  // margin-bottom: 80px;
+  position: fixed;
+  top: 0;
 
   &__nav {
     // background-color: red;
