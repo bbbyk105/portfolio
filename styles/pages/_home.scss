@@ -1,0 +1,161 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// body {
+//   background-image: url("../images/bg.png");
+//   background-size: cover; /* 画像を全体に表示 */
+//   background-position: center; /* 画像を中央に配置 */
+//   background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+// }
+.hero {
+  @extend .pb-lg;
+  padding-top: 100px;
+}
+
+.swiper {
+  width: 500px;
+  height: 300px;
+}
+
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  // margin-bottom: 80px;
+  position: fixed;
+  top: 0;
+
+  &__nav {
+    // background-color: red;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 100px;
+  }
+  &__li {
+    & > a {
+      // display: flex;
+      text-decoration: none;
+      color: $cWhite;
+      align-items: center;
+      padding: 0 1.5rem;
+      text-transform: uppercase;
+      font-weight: 300px;
+      font-size: 0.83rem;
+    }
+
+    &.hamburger {
+      padding: 1.5rem;
+
+      & > a {
+        padding: 0;
+        width: 37px;
+        height: 37px;
+        display: flex;
+        border-radius: 50%;
+        background-color: rgba(115, 115, 115, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        justify-content: center;
+        align-items: center;
+
+        & > .bar {
+          position: relative;
+          width: 52%;
+          height: 1.3px;
+          background-color: #fff;
+          border-radius: 2px;
+
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 100%;
+            background-color: inherit;
+            border-radius: 2px;
+          }
+
+          &:before {
+            top: -4.5px;
+          }
+
+          &:after {
+            top: 4.5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+}
+
+.profile {
+  @extend .content-width;
+  @extend .mb-lg;
+
+  &__inner {
+    @extend .flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    @include mq(md) {
+      padding: 100px;
+    }
+
+    @include mq(lg) {
+      padding: 100px 30px 150px;
+    }
+  }
+
+  &__img {
+    height: 300px;
+    @extend .mb-sm;
+
+    @include mq(md) {
+      flex-basis: 47%;
+    }
+
+    @include mq(lg) {
+      height: 400px;
+    }
+    & > img {
+      opacity: 1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+
+      border: 1px solid green;
+    }
+  }
+  &__texts {
+    @extend .mb-sm;
+
+    @include mq(md) {
+      position: flex;
+      align-items: center;
+      flex-basis: 47%;
+    }
+  }
+}
