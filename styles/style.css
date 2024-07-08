@@ -8,7 +8,7 @@
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
   color: white;
-  background-color: #333;
+  background-color: black;
 }
 
 img {
@@ -236,31 +236,7 @@ img {
   }
 }
 
-#particle-js {
-  width: 100%;
-  height: 100vh;
-}
-
-h1 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 80px;
-  color: white;
-}
-
-/*アニメーション描画用*/
-canvas {
-  position: absolute; /*親のブロックを基準にして相対位置に配置する*/
-  /*位置指定*/
-  top: 0;
-  right: 0;
-  z-index: -1; /*重ね順を-1に　※1以上だとほかのコンテンツの上に被さってしまいます*/
-}
-
 #particles-js {
-  position: fixed;
   top: 0;
   left: 0;
   height: 100vh; /* 画面の高さいっぱいに広がる */
@@ -271,4 +247,7 @@ canvas {
   height: 100%;
   width: 100%;
   position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -100;
 }/*# sourceMappingURL=style.css.map */
