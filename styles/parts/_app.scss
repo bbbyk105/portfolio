@@ -15,5 +15,11 @@
     top: 0;
     right: 0;
     z-index: -100;
+    background-color: $cBlack;
+
+    &.hidden{
+    display: none;
+
+    }
   }
 }

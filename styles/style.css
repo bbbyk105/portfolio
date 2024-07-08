@@ -8,7 +8,6 @@
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
   color: white;
-  background-color: black;
 }
 
 img {
@@ -132,6 +131,10 @@ img {
   position: fixed;
   top: 0;
   z-index: 100;
+  opacity: 0;
+}
+.header.appear {
+  opacity: 1;
 }
 .header__nav {
   max-width: 100%;
@@ -254,4 +257,8 @@ img {
   top: 0;
   right: 0;
   z-index: -100;
+  background-color: black;
+}
+#particles-js canvas.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
