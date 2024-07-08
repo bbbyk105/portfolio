@@ -1,0 +1,14 @@
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* 画面の高さいっぱいに広がる */
+  width: 100vw; /* 画面の幅いっぱいに広がる */
+  z-index: -1; /* 背面に配置 */
+
+  canvas {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}

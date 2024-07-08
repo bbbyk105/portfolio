@@ -1,3 +1,10 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
   color: white;
@@ -26,11 +33,11 @@ img {
   padding-bottom: 16px !important;
 }
 
-.pb-lg, .hero {
+.pb-lg {
   padding-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .pb-lg, .hero {
+  .pb-lg {
     padding-bottom: 150px !important;
   }
 }
@@ -115,20 +122,12 @@ img {
   box-sizing: border-box;
 }
 
-.hero {
-  padding-top: 100px;
-}
-
-.swiper {
-  width: 500px;
-  height: 300px;
-}
-
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 .header__nav {
   max-width: 100%;
@@ -227,7 +226,7 @@ img {
      object-fit: cover;
   width: 100%;
   height: 100%;
-  border: 1px solid green;
+  border: 1px solid blue;
 }
 @media screen and (min-width: 600px) {
   .profile__texts {
@@ -235,4 +234,41 @@ img {
     align-items: center;
     flex-basis: 47%;
   }
+}
+
+#particle-js {
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+}
+
+/*アニメーション描画用*/
+canvas {
+  position: absolute; /*親のブロックを基準にして相対位置に配置する*/
+  /*位置指定*/
+  top: 0;
+  right: 0;
+  z-index: -1; /*重ね順を-1に　※1以上だとほかのコンテンツの上に被さってしまいます*/
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* 画面の高さいっぱいに広がる */
+  width: 100vw; /* 画面の幅いっぱいに広がる */
+  z-index: -1; /* 背面に配置 */
+}
+#particles-js canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
