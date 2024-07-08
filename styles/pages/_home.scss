@@ -1,6 +1,7 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
+
 *,
 *::before,
 *::after {
@@ -9,29 +10,13 @@
   box-sizing: border-box;
 }
 
-// body {
-//   background-image: url("../images/bg.png");
-//   background-size: cover; /* 画像を全体に表示 */
-//   background-position: center; /* 画像を中央に配置 */
-//   background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
-// }
-.hero {
-  @extend .pb-lg;
-  padding-top: 100px;
-}
-
-.swiper {
-  width: 500px;
-  // max-width: 100%;
-  height: 300px;
-}
-
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   // margin-bottom: 80px;
   position: fixed;
   top: 0;
+  z-index: 100;
 
   &__nav {
     // background-color: red;
@@ -147,9 +132,10 @@
       width: 100%;
       height: 100%;
 
-      border: 1px solid green;
+      border: 1px solid blue;
     }
   }
+
   &__texts {
     @extend .mb-sm;
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Byakko's Portfolio</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,15 +12,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/vendors/css-reset.css" />
-    <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <!-- <canvas id="background-canvas"></canvas>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
-    <script src="https://codepen.io/gmoyer/pen/PbwWKN.js"></script>
-    <script src="parts_js/background.js"></script> -->
-
     <div id="grobal-container">
       <div class="container">
         <header class="header">
@@ -43,68 +38,45 @@
           </nav>
         </header>
         <div id="content">
-          <div class="hero">
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="images/usa.jpg" alt="photos">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/experiment.jpg" alt="experiment">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/friends.jpg" alt="">
-                </div>
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </div>
           <div id="main-content">
             <main>
-              <section class="profile">
-                <div class="profile__inner">
-                  <div class="profile__img">
-                    <img src="images/myphoto.JPG" alt="profile写真" />
-                  </div>
-                  <div class="profile__texts">
-                    <div class="profile__texts-inner">
-                      <div class="profile__title main-title">
-                        <span>Profile</span>
-                      </div>
-                      <div class="profile__description">
-                        <p>
-                          2003年生まれ、静岡県出身のエンジニアを目指す大学生。
-                          <br />
-                          現在はフロントエンドを主に学んでおりReactを用いた開発を勉強中。
-                          <br />
-                          大学では学習院大学理学部にて生物学を学んでいる。
-                          <br />
-                          幼少期からhiphopに触れ、その影響からダンスを始め、現在に至る。
-                          <br />
-                          趣味はサウナ、カフェ巡り、筋トレ。
-                        </p>
+              <div id="particles-js">
+                <section class="profile">
+                  <div class="profile__inner">
+                    <div class="profile__img">
+                      <img src="images/myphoto.JPG" alt="profile写真" />
+                    </div>
+                    <div class="profile__texts">
+                      <div class="profile__texts-inner">
+                        <div class="profile__title main-title">
+                          <span>Profile</span>
+                        </div>
+                        <div class="profile__description">
+                          <p>
+                            2003年生まれ、静岡県出身のエンジニアを目指す大学生。
+                            <br />
+                            現在はフロントエンドを主に学んでおりReactを用いた開発を勉強中。
+                            <br />
+                            大学では学習院大学理学部にて生物学を学んでいる。
+                            <br />
+                            幼少期からhiphopに触れ、その影響からダンスを始め、現在に至る。
+                            <br />
+                            趣味はサウナ、カフェ巡り、筋トレ。
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </section>
+                </section>
+              </div>
             </main>
           </div>
         </div>
       </div>
     </div>
-    <script src="scripts/vendors/swiper-bundle.min.js"></script>
-    <script src="scripts/libs/slider.js"></script>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
+    <script type="module" src="parts_js/particles.js"></script>
+    <script type="module" src="parts_js/app.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
