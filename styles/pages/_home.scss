@@ -1,7 +1,6 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-
 *,
 *::before,
 *::after {
@@ -11,24 +10,21 @@
 }
 
 .video {
+  // height: 600px;
   z-index: 150;
 }
+
 
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  // margin-bottom: 80px;
+  margin-bottom: 80px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 100;
-  opacity: 0;
 
-  &.appear {
-    opacity: 1;
-  }
-
-  &__nav {
-    // background-color: red;
+  &__inner {
     max-width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
@@ -37,74 +33,60 @@
     align-items: center;
   }
 
-  &__logo {
-    width: 100px;
-  }
-
   &__ul {
     display: flex;
     list-style: none;
-    align-items: center;
+    align-items:  center;
+    justify-content: flex-end; /* リストを右寄せにする */
+    margin-left: auto; /* 左側の余白を自動調整 */
+  }
+
+  .logo {
+    width: 100px;
   }
 
   &__li {
     & > a {
-      // display: flex;
+      display: flex;
       text-decoration: none;
-      color: $cWhite;
+      color: #ffffff; /* Example color */
       align-items: center;
       padding: 0 1.5rem;
       text-transform: uppercase;
-      font-weight: 300px;
+      font-weight: 300; /* Not px for font-weight */
       font-size: 0.83rem;
     }
+  }
 
-    &.hamburger {
-      padding: 1.5rem;
+  .mobile-menu__hamburger {
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 
-      & > a {
-        padding: 0;
-        width: 37px;
-        height: 37px;
-        display: flex;
-        border-radius: 50%;
-        background-color: rgba(115, 115, 115, 0.7);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        justify-content: center;
-        align-items: center;
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #18b948; /* Example color */
+      margin: 5px 0;
+      transition: transform 0.4s ease;
 
-        & > .bar {
-          position: relative;
-          width: 52%;
-          height: 1.3px;
-          background-color: #fff;
-          border-radius: 2px;
+      &:nth-child(1) {
+        transform-origin: left;
+      }
 
-          &:before,
-          &:after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 100%;
-            background-color: inherit;
-            border-radius: 2px;
-          }
+      &:nth-child(2) {
+        transform-origin: center;
+      }
 
-          &:before {
-            top: -4.5px;
-          }
-
-          &:after {
-            top: 4.5px;
-          }
-        }
+      &:nth-child(3) {
+        transform-origin: right;
       }
     }
   }
 }
+// }
 
 .profile {
   @extend .content-width;
@@ -120,6 +102,7 @@
     }
 
     @include mq(lg) {
+      // 編集予定
       padding: 100px 30px 150px;
     }
   }

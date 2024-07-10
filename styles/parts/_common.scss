@@ -9,6 +9,7 @@
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
   color: $cWhite;
+  background-color: $cBlack;
 }
 
 img {
@@ -106,3 +107,7 @@ img {
   @extend .font-sm;
   color: $cSubTitle;
 }
+
+// .hidden {
+//   display: none;
+// }
