@@ -72,5 +72,11 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 14px;
-}
-@keyframes {}/*# sourceMappingURL=loader.css.map */
+  animation-name: lta;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}/*# sourceMappingURL=loader.css.map */
