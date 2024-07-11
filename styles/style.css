@@ -176,10 +176,10 @@ img {
 }
 .header .mobile-menu__hamburger span {
   display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #29c99e; /* Example color */
-  margin: 5px 0;
+  width: 30px;
+  height: 2px;
+  background-color: #29c99e;
+  margin: 7.5px 0;
   transition: transform 0.4s ease;
 }
 .header .mobile-menu__hamburger span:nth-child(1) {
