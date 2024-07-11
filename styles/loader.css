@@ -1,12 +1,31 @@
 /* HTML: <div class="loader"></div> */
+.pace-done #global-container {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+#global-container {
+  opacity: 0;
+}
+
+.pace-running #global-container {
+  opacity: 0;
+}
+
+.pace-done .loader {
+  opacity: 0;
+}
+
 .loader {
   width: 60px;
   aspect-ratio: 1;
   display: grid;
   position: absolute;
-  z-index: 200;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   background-color: black;
 }
 .loader:before, .loader:after {
@@ -22,7 +41,7 @@
 .loader:after {
   border: solid;
   border-width: 5px 20px;
-  --s:0;
+  --s: 0;
 }
 @keyframes l19 {
   0% {
@@ -46,4 +65,12 @@
   90%, 100% {
     transform: perspective(100px) rotate3d(1, var(--s, 1), 0, 360deg);
   }
-}/*# sourceMappingURL=loader.css.map */
+}
+.loader .loader-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+@keyframes {}/*# sourceMappingURL=loader.css.map */
