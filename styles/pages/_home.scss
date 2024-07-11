@@ -23,6 +23,7 @@
   top: 0;
   left: 0;
   z-index: 100;
+  justify-content: space-between;
 
   &__inner {
     max-width: 100%;
@@ -43,19 +44,25 @@
 
   .logo {
     width: 100px;
+    font-weight: bold;
   }
 
   &__li {
     & > a {
       display: flex;
       text-decoration: none;
-      color: #ffffff; /* Example color */
+      color: $cWhite; /* Example color */
       align-items: center;
       padding: 0 1.5rem;
       text-transform: uppercase;
       font-weight: 300; /* Not px for font-weight */
       font-size: 0.83rem;
+
+      &:hover {
+        color: $cTiffany;
+      }
     }
+    
   }
 
   .mobile-menu__hamburger {
@@ -68,7 +75,7 @@
       display: block;
       width: 25px;
       height: 3px;
-      background-color: #18b948; /* Example color */
+      background-color: $cTiffany; /* Example color */
       margin: 5px 0;
       transition: transform 0.4s ease;
 
@@ -124,7 +131,7 @@
       width: 100%;
       height: 100%;
 
-      border: 1px solid blue;
+      border: 1px solid $cTiffany;
     }
   }
 
