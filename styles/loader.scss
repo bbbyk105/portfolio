@@ -1,5 +1,6 @@
 /* HTML: <div class="loader"></div> */
 @use "globals/_variables.scss" as *;
+@use "globals/mixin" as *;
 
 .pace-done #global-container {
   transition: opacity 1s;
@@ -79,9 +80,10 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-
-    @keyframes {
-        
-    }
+    
+    @include animation (
+        $name: lta,
+        $duration:2s
+    )
   }
 }
