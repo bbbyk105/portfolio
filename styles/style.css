@@ -261,6 +261,12 @@ img {
   }
 }
 
+.languages {
+  background-color: rgba(6, 171, 221, 0.1);
+}
+.languages__item {
+  margin-bottom: 60px;
+}
 .languages__inner {
   display: flex;
   flex-direction: colum;

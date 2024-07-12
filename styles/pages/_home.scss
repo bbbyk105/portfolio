@@ -173,12 +173,18 @@
 .languages {
   @extend .content-width;
   @extend .mb-lg;
+  background-color: rgba(6, 171, 221, 0.1);
 
+  &__item {
+    margin-bottom: 60px;
+  }
+  
   &__inner {
     display: flex;
     flex-direction: colum;
     align-items: center;
     justify-content: space-between;
+    
 
     @include mq(lg) {
       margin: 60px;
