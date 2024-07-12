@@ -1,2 +1,3 @@
-@use "pages/home";
-@use "parts/app";
+@use "pages/home" as * ; 
+@use "parts/app" as * ;
+@use "parts/slider" as *;

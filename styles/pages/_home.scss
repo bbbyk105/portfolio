@@ -9,6 +9,16 @@
   box-sizing: border-box;
 }
 
+.greet{
+  display: flex;
+  & > p {
+  
+  align-items: center;
+  }
+}
+
+
+
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -168,7 +178,7 @@
   &__sub-title {
     margin-bottom: 15px;
     padding-top: 20px;
-    
+
     display: flex;
     justify-content: center;
   }

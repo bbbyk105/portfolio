@@ -9,6 +9,7 @@ body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
   color: white;
   background-color: black;
+  z-index: 1;
 }
 
 img {
@@ -120,6 +121,13 @@ img {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.greet {
+  display: flex;
+}
+.greet > p {
+  align-items: center;
 }
 
 .header {
@@ -278,6 +286,7 @@ img {
   height: 100vh; /* 画面の高さいっぱいに広がる */
   width: 100vw; /* 画面の幅いっぱいに広がる */
   z-index: -1; /* 背面に配置 */
+  background-size: cover;
 }
 #particles-js canvas {
   height: 100%;
@@ -287,4 +296,9 @@ img {
   right: 0;
   z-index: -100;
   background-color: black;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
 }/*# sourceMappingURL=style.css.map */
