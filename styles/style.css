@@ -16,7 +16,7 @@ img {
   vertical-align: bottom;
 }
 
-.mb-sm, .profile__img, .profile__texts {
+.mb-sm, .profile__img {
   margin-bottom: 16px !important;
 }
 
@@ -29,7 +29,7 @@ img {
   }
 }
 
-.pb-sm {
+.pb-sm, .profile__texts {
   padding-bottom: 16px !important;
 }
 
@@ -194,16 +194,17 @@ img {
 
 .profile__inner {
   justify-content: space-between;
-  padding: 15px;
+  background-color: rgba(96, 203, 180, 0.4);
+  margin: 160px 15px;
 }
 @media screen and (min-width: 600px) {
   .profile__inner {
-    padding: 100px;
+    padding: 50px;
   }
 }
 @media screen and (min-width: 960px) {
   .profile__inner {
-    padding: 100px 30px 150px;
+    margin: 150px;
   }
 }
 .profile__img {
@@ -232,6 +233,14 @@ img {
     position: flex;
     align-items: center;
     flex-basis: 47%;
+  }
+}
+.profile__title {
+  position: relative;
+}
+@media screen and (min-width: 960px) {
+  .profile__description {
+    margin-bottom: 40px;
   }
 }
 

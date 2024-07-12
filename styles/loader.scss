@@ -80,10 +80,14 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 14px;
-    
-    @include animation (
+
+    & > .char {
+      @include animation(
         $name: lta,
-        $duration:2s
-    )
+        $duration: 1.2s,
+        $iteration-count: infinite,
+        $timing-function: ease-in-out
+      );
+    }
   }
 }
