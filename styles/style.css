@@ -245,8 +245,19 @@ img {
   flex-direction: column;
   align-items: center;
 }
-.languages__title {
+@media screen and (min-width: 960px) {
+  .languages__inner {
+    margin: 150px;
+  }
+}
+.languages__main-title {
   margin-bottom: 20px;
+}
+.languages__sub-title {
+  margin-bottom: 15px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 .languages__icons {
   display: flex;
@@ -254,11 +265,11 @@ img {
   justify-content: center;
 }
 .languages__icons a {
-  flex: 0 0 calc(25% - 10px);
-  margin: 5px;
+  margin: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 20%;
 }
 
 #particles-js {

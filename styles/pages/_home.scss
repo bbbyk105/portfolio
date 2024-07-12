@@ -151,28 +151,39 @@
 .languages {
   @extend .content-width;
   @extend .mb-lg;
-  
+
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include mq(lg) {
+      margin: 150px;
+    }
   }
-  
-  &__title {
+
+  &__main-title {
     margin-bottom: 20px;
   }
-  
+
+  &__sub-title {
+    margin-bottom: 15px;
+    padding-top: 20px;
+    
+    display: flex;
+    justify-content: center;
+  }
+
   &__icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   &__icons a {
-    flex: 0 0 calc(25% - 10px);
-    margin: 5px;
+    margin: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-basis: 20%;
   }
 }
