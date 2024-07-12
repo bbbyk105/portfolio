@@ -10,10 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Noto+Sans+JP:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=SC&display+Kameron:wght@400..700&family=Noto+Sans+JP:wght@500&display+Baskervville=swap"
       rel="stylesheet"
     />
-    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+
+    <link
+      href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/vendors/css-reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
@@ -23,6 +27,13 @@
     </div>
     <div id="global-container">
       <div class="container">
+        <div id="particles-js">
+          <div class="greet">
+            <div class="greet__inner">
+              <div class="greet__text">hello my name is Byakko Kondo</div>
+            </div>
+          </div>
+        </div>
         <header class="header">
           <div class="header__inner">
             <div class="logo">Portfolio</div>
@@ -32,7 +43,7 @@
                   <a class="header__a" href="#">Home</a>
                 </li>
                 <li class="header__li">
-                  <a class="header__a" href="#Profile">Profile</a>
+                  <a class="header__a" href="#">Profile</a>
                 </li>
                 <li class="header__li">
                   <a class="header__a" href="#">Contact</a>
@@ -54,51 +65,126 @@
               </div>
             </aside>
             <main>
-              <div id="particles-js">
-                <section class="languages">
-                  <div class="languages__innner">
-                    <div class="languages__title">
-                      <h3>languages, flame-works, environment</h3>
-                    </div>
-                    <div class="icons">
-                      
-                    </div>
+              <section class="profile">
+                <div class="profile__inner">
+                  <div class="profile__img">
+                    <img src="images/myphoto.JPG" alt="profile写真" />
                   </div>
-                </section>
-                <section class="profile">
-                  <div class="profile__inner">
-                    <div class="profile__img">
-                      <img src="images/myphoto.JPG" alt="profile写真" />
-                    </div>
-                    <div class="profile__texts">
-                      <div class="profile__texts-inner">
-                        <div class="profile__title main-title">
-                          <span>Profile</span>
-                        </div>
-                        <div class="profile__description">
-                          <p>
-                            2003年生まれ、静岡県出身のエンジニアを目指す大学生。
-                            <br />
-                            現在はフロントエンドを主に学んでおり,
-                            <br />
-                            Reactを用いた開発を勉強中。
-                            <br />
-                            大学では学習院大学理学部にて生物学を学んでいる。
-                            <br />
-                            趣味はサウナ、カフェ巡り、筋トレ。
-                          </p>
-                        </div>
+                  <div class="profile__texts">
+                    <div class="profile__texts-inner">
+                      <div class="profile__title main-title">
+                        <span>Profile</span>
+                      </div>
+                      <div class="profile__description">
+                        <p>
+                          2003年生まれ、静岡県出身のエンジニアを目指す大学生。
+                          <br />
+                          現在はフロントエンドを主に学んでおり,
+                          <br />
+                          Reactを用いた開発を勉強中。
+                          <br />
+                          大学では学習院大学理学部にて生物学を学んでいる。
+                          <br />
+                          趣味はサウナ、カフェ巡り、筋トレ。
+                          <br />
+                          ポートフォリオには自身の最新のプロジェクトやスキルを反映し,
+                          常に成長を目指している。
+                        </p>
                       </div>
                     </div>
                   </div>
-                </section>
-              </div>
+                </div>
+              </section>
+              <section class="languages">
+                <div class="languages__inner">
+                  <h1 class="languages__main-title">Languages, libraries</h1>
+
+                  <div class="languages__frontend">
+                    <h3 class="languages__sub-title">Frontend</h3>
+                    <div class="languages__icons">
+                      <a href="#"
+                        ><img
+                          src="https://skillicons.dev/icons?i=html"
+                          alt="html"
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://skillicons.dev/icons?i=css"
+                          alt="css"
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://skillicons.dev/icons?i=sass"
+                          alt="sass"
+                      /></a>
+                      <a href="#"
+                        ><img src="https://skillicons.dev/icons?i=js" alt="js"
+                      /></a>
+                      <a href="#"
+                        ><img src="https://skillicons.dev/icons?i=ts" alt="ts"
+                      /></a>
+                    </div>
+                  </div>
+
+                  <div class="languages__libs">
+                    <h3 class="languages__sub-title">libraries & tools</h3>
+                    <div class="languages__icons">
+                      <a href="#"
+                        ><img
+                          src="https://skillicons.dev/icons?i=react"
+                          alt="react"
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://skillicons.dev/icons?i=git"
+                          alt="git"
+                      /></a>
+                      <a href="#"
+                        ><img
+                          src="https://skillicons.dev/icons?i=github"
+                          alt="github"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="uni">
+                <div class="uni__inner">
+                  <h1 class="uni__main-title">大学での研究内容</h1>
+                  <div class="uni__item">
+                    <img src="images/experiment.jpg" alt="experiment">
+                    <p class="uni__title">蛍光タンパク質の発現</p>
+                  </div>
+                  <div class="uni__item">
+                    <img src="images/chloroplast.jpg" alt="chloroplast">
+                    <p class="uni__title">葉緑体の発現</p>
+                  </div>
+                  <div class="uni__item">
+                    <img src="images/mitochondria.jpg" alt="mito">
+                    <p class="uni__title">ミトコンドリアの発現</p>
+                  </div>
+                  <div class="uni__item">
+                    <img src="images/chromosome.jpg" alt="chromosome">
+                    <p class="uni__title">染色体の観察</p>
+                  </div>
+                  <div class="uni__item">
+                    <img src="" alt="">
+                  </div>
+                  <div>
+                  </div>
+                </div>
+              </section>
             </main>
           </div>
         </div>
       </div>
     </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <script type="module" src="scripts/libs/particles.js"></script>
     <script type="module" src="scripts/libs/app.js"></script>
     <script src="scripts/main.js"></script>

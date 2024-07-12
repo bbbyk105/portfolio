@@ -9,9 +9,26 @@
   box-sizing: border-box;
 }
 
-.video {
-  // height: 600px;
-  z-index: 150;
+.greet {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 35px;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 .header {
@@ -91,7 +108,6 @@
     }
   }
 }
-// }
 
 .profile {
   @extend .content-width;
@@ -108,7 +124,7 @@
     }
 
     @include mq(lg) {
-      margin: 150px ;
+      margin: 150px;
     }
   }
 
@@ -151,5 +167,45 @@
     @include mq(lg) {
       margin-bottom: 40px;
     }
+  }
+}
+
+.languages {
+  @extend .content-width;
+  @extend .mb-lg;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq(lg) {
+      margin: 150px;
+    }
+  }
+
+  &__main-title {
+    margin-bottom: 20px;
+  }
+
+  &__sub-title {
+    margin-bottom: 15px;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__icons a {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 20%;
   }
 }
