@@ -21,11 +21,11 @@ img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .profile, .languages {
+.mb-lg, .profile, .languages, .uni {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .profile, .languages {
+  .mb-lg, .profile, .languages, .uni {
     margin-bottom: 150px !important;
   }
 }
@@ -43,18 +43,18 @@ img {
   }
 }
 
-.content-width, .profile, .languages {
+.content-width, .profile, .languages, .uni {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
 }
 
-.flex, .profile__inner {
+.flex, .profile__inner, .uni__inner {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex, .profile__inner {
+  .flex, .profile__inner, .uni__inner {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -261,14 +261,21 @@ img {
   }
 }
 
+.languages {
+  background-color: rgba(6, 171, 221, 0.1);
+}
+.languages__item {
+  margin-bottom: 60px;
+}
 .languages__inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: colum;
   align-items: center;
+  justify-content: space-between;
 }
 @media screen and (min-width: 960px) {
   .languages__inner {
-    margin: 150px;
+    margin: 60px;
   }
 }
 .languages__main-title {
@@ -293,6 +300,17 @@ img {
   flex-basis: 20%;
 }
 
+.uni__item {
+  flex-basis: 50%;
+  padding: 10px;
+}
+.uni__item > img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #particles-js {
   top: 0;
   left: 0;
@@ -309,9 +327,4 @@ img {
   right: 0;
   z-index: -100;
   background-color: black;
-}
-
-.swiper {
-  width: 600px;
-  height: 300px;
 }/*# sourceMappingURL=style.css.map */
