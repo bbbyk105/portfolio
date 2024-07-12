@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Noto+Sans+JP:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=SC&display+Kameron:wght@400..700&family=Noto+Sans+JP:wght@500&display+Baskervville=swap"
       rel="stylesheet"
     />
+
     <link
       href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"
       rel="stylesheet"
@@ -42,7 +43,7 @@
                   <a class="header__a" href="#">Home</a>
                 </li>
                 <li class="header__li">
-                  <a class="header__a" href=".profile">Profile</a>
+                  <a class="header__a" href="#">Profile</a>
                 </li>
                 <li class="header__li">
                   <a class="header__a" href="#">Contact</a>
@@ -149,20 +150,27 @@
               </section>
               <section class="uni">
                 <div class="uni__inner">
-                  <div>
-                    <h1 class="uni__main-title">大学での活動</h1>
+                  <h1 class="uni__main-title">大学での研究内容</h1>
+                  <div class="uni__item">
+                    <img src="images/experiment.jpg" alt="experiment">
+                    <p class="uni__title">蛍光タンパク質の発現</p>
                   </div>
-                  <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="swiper-slide">Slide 1</div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
-                      ...
-                    </div>
-
-                    <div class="swiper-scrollbar"></div>
+                  <div class="uni__item">
+                    <img src="images/chloroplast.jpg" alt="chloroplast">
+                    <p class="uni__title">葉緑体の発現</p>
+                  </div>
+                  <div class="uni__item">
+                    <img src="images/mitochondria.jpg" alt="mito">
+                    <p class="uni__title">ミトコンドリアの発現</p>
+                  </div>
+                  <div class="uni__item">
+                    <img src="images/chromosome.jpg" alt="chromosome">
+                    <p class="uni__title">染色体の観察</p>
+                  </div>
+                  <div class="uni__item">
+                    <img src="" alt="">
+                  </div>
+                  <div>
                   </div>
                 </div>
               </section>
@@ -172,6 +180,11 @@
       </div>
     </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <script type="module" src="scripts/libs/particles.js"></script>
     <script type="module" src="scripts/libs/app.js"></script>
     <script src="scripts/main.js"></script>
