@@ -21,11 +21,11 @@ img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .profile, .languages, .uni {
+.mb-lg, .profile, .languages, .uni, .contact {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .profile, .languages, .uni {
+  .mb-lg, .profile, .languages, .uni, .contact {
     margin-bottom: 150px !important;
   }
 }
@@ -43,7 +43,7 @@ img {
   }
 }
 
-.content-width, .profile, .languages, .uni {
+.content-width, .profile, .languages, .uni, .contact {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -113,14 +113,6 @@ img {
 
 .sub-title {
   color: #535353;
-}
-
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 .greet {
@@ -309,6 +301,76 @@ img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.contact__title {
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #29c99e;
+}
+.contact__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+}
+.contact__item {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.contact__item > .label {
+  float: left;
+  margin-right: 20px;
+  width: 135px;
+  border-left: 3px solid #29c99e;
+  padding-left: 10px;
+}
+.contact__input {
+  float: left;
+  width: 300px;
+}
+.contact__input[type=text], .contact__input[type=email] {
+  border: solid 1px #29c99e;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+.contact__inputsf {
+  border: 1px solid #29c99e;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  height: 160px;
+  width: 300px;
+  font-size: 15px;
+}
+.contact__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+.contact__button input[type=submit] {
+  border: none;
+  background-color: #29c99e;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 17px;
+  margin: 0 5px;
+  box-shadow: 1px 1px 2px white;
+  cursor: pointer;
+}
+.contact__button input[type=reset] {
+  border: none;
+  background-color: #90e5ce;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 17px;
+  margin: 0 5px;
+  box-shadow: 1px 1px 2px white;
+  cursor: pointer;
 }
 
 #particles-js {

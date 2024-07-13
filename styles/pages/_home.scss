@@ -1,13 +1,13 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+// *,
+// *::before,
+// *::after {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
 
 .greet {
   position: relative;
@@ -178,13 +178,12 @@
   &__item {
     margin-bottom: 60px;
   }
-  
+
   &__inner {
     display: flex;
     flex-direction: colum;
     align-items: center;
     justify-content: space-between;
-    
 
     @include mq(lg) {
       margin: 60px;
@@ -202,7 +201,6 @@
     display: flex;
     justify-content: center;
   }
-  
 
   &__icons {
     display: flex;
@@ -237,5 +235,90 @@
       object-fit: cover;
     }
   }
+}
 
+.contact {
+  @extend .content-width;
+  @extend .mb-lg;
+
+  &__title {
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $cTiffany;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+  }
+
+  &__item {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    & > .label {
+      float: left;
+      margin-right: 20px;
+      width: 135px;
+      border-left: 3px solid $cTiffany;
+      padding-left: 10px;
+    }
+  }
+
+  &__input {
+    float: left;
+    width: 300px;
+
+    &[type="text"],
+    &[type="email"] {
+      border: solid 1px $cTiffany;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 15px;
+    }
+  }
+
+  &__inputsf {
+    border: 1px solid $cTiffany;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    height: 160px;
+    width: 300px;
+    font-size: 15px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+
+
+    input[type="submit"] {
+      border: none;
+      background-color: $cTiffany;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 17px;
+      margin: 0 5px;
+      box-shadow: 1px 1px 2px $cWhite;
+      cursor: pointer;
+    }
+
+    input[type="reset"] {
+      border: none;
+      background-color: #90e5ce;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 17px;
+      margin: 0 5px;
+      box-shadow: 1px 1px 2px $cWhite;
+      cursor: pointer;
+    }
+  }
 }
