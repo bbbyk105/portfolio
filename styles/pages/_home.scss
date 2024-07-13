@@ -322,3 +322,45 @@
     }
   }
 }
+
+.footer {
+  @extend .content-width;
+  padding: 60px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  &__logo {
+    font-weight: bold;
+  }
+
+  &__nav {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;    
+  }
+
+  &__ul {
+    @extend .flex;
+    list-style: none;
+  }
+
+  &__li {
+    margin: 10px;
+    
+    @include mq(md) {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+    & > a {
+      text-decoration: none;
+      color:#cee4de;
+
+      &:hover {
+        color: $cTiffany;
+      }
+    }
+  }
+
+  
+}
