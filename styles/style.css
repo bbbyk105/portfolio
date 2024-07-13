@@ -148,6 +148,14 @@ img {
 .header.hidden {
   display: none;
 }
+.header__nav {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .header__nav {
+    display: block;
+  }
+}
 .header__inner {
   max-width: 100%;
   margin: 0 auto;
