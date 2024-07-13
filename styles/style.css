@@ -145,6 +145,9 @@ img {
   z-index: 100;
   justify-content: space-between;
 }
+.header.hidden {
+  display: none;
+}
 .header__inner {
   max-width: 100%;
   margin: 0 auto;
@@ -362,7 +365,7 @@ img {
   font-weight: bold;
   border-radius: 5px;
   font-size: 17px;
-  margin: 0 5px;
+  margin-left: 55px;
   box-shadow: 1px 1px 2px white;
   cursor: pointer;
 }
@@ -373,7 +376,7 @@ img {
   font-weight: bold;
   border-radius: 5px;
   font-size: 17px;
-  margin: 0 5px;
+  margin: 0 10px;
   box-shadow: 1px 1px 2px white;
   cursor: pointer;
 }
@@ -426,4 +429,42 @@ img {
   right: 0;
   z-index: -100;
   background-color: black;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: 600;
+  padding: 10px 40px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: black;
+  text-decoration: none !important;
+}
+.btn.slide-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn.slide-bg::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #29c99e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.btn.slide-bg:hover {
+  color: white;
+}
+.btn.slide-bg:hover::before {
+  transform: none;
 }/*# sourceMappingURL=style.css.map */
