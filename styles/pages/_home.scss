@@ -303,6 +303,22 @@
       padding: 10px 20px;
       font-weight: bold;
       border-radius: 5px;
+      font-size: 17px;
+      margin: 0 5px;
+      box-shadow: 1px 1px 2px $cWhite;
+      cursor: pointer;
+    }
+
+    input[type="reset"] {
+      border: none;
+      background-color: #90e5ce;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 17px;
+      margin: 0 5px;
+      box-shadow: 1px 1px 2px $cWhite;
+      cursor: pointer;
     }
   }
 }

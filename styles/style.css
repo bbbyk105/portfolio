@@ -356,6 +356,21 @@ img {
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 5px;
+  font-size: 17px;
+  margin: 0 5px;
+  box-shadow: 1px 1px 2px white;
+  cursor: pointer;
+}
+.contact__button input[type=reset] {
+  border: none;
+  background-color: #90e5ce;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 17px;
+  margin: 0 5px;
+  box-shadow: 1px 1px 2px white;
+  cursor: pointer;
 }
 
 #particles-js {
