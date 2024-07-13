@@ -302,6 +302,11 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.uni__btn {
+  margin-top: 30px;
+  text-align: center;
+  flex-basis: 100%;
+}
 
 .contact__title {
   font-size: 20px;
