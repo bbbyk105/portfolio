@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Byakko's Portfolio</title>
     <script src="scripts/vendors/pace.js"></script>
-    <script src="scripts/libs/animation.js"></script>
+    <script src="scripts/libs/text-animation.js"></script>
     <link rel="stylesheet" href="styles/loader.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -170,15 +170,43 @@
                   </div>
                   <div class="uni__item">
                     <img src="images/chloroplast.jpg" alt="chloroplast" />
-                    <p class="uni__title">葉緑体の発現</p>
+                    <p class="uni__title">葉緑体の染色</p>
                   </div>
                   <div class="uni__item">
                     <img src="images/mitochondria.jpg" alt="mito" />
-                    <p class="uni__title">ミトコンドリアの発現</p>
+                    <p class="uni__title">ミトコンドリアの染色</p>
                   </div>
                   <div class="uni__item">
                     <img src="images/chromosome.jpg" alt="chromosome" />
                     <p class="uni__title">染色体の観察</p>
+                  </div>
+                </div>
+              </section>
+              <section class="contact-form">
+                <div class="contact">
+                  <p class="contact__title">Contact Me</p>
+                  <div class="contact__inner">
+                    <form action="" method="post">
+                      <div class="contact__item">
+                        <label class="label">Name</label>
+                        <input type="text" class="contact__input" name="name" required />
+                      </div>
+  
+                      <div class="contact__item">
+                        <label class="label">E-mail</label>
+                        <input type="email" class="contact__input" name="email" required />
+                      </div>
+  
+                      <div class="contact__item">
+                        <label class="label">Messages</label>
+                        <textarea class="contact__inputsf"></textarea>
+                      </div>
+  
+                      <div class="contact__button">
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                      </div>
+                    </form>
                   </div>
                 </div>
               </section>
