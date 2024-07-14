@@ -43,10 +43,10 @@
                   <a class="header__a" href="#">Home</a>
                 </li>
                 <li class="header__li">
-                  <a class="header__a" href="#">Profile</a>
+                  <a class="header__a" href="#profile">Profile</a>
                 </li>
                 <li class="header__li">
-                  <a class="header__a" href="#">Contact</a>
+                  <a class="header__a" href="#contact">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -65,7 +65,7 @@
               </div>
             </aside>
             <main>
-              <section class="profile">
+              <section class="profile" id="profile">
                 <div class="profile__inner">
                   <div class="profile__img">
                     <img src="images/myphoto.JPG" alt="profile写真" />
@@ -95,7 +95,7 @@
                   </div>
                 </div>
               </section>
-              <section class="languages">
+              <section class="languages" id="lg+lib">
                 <div class="languages__title">
                   <h1>Languages, libraries</h1>
                 </div>
@@ -158,7 +158,7 @@
                   </div>
                 </div>
               </section>
-              <section class="uni">
+              <section class="uni" id="experiments">
                 <div class="" uni__title>
                   <h2 class="uni__main-title">Experiments</h2>
                   <p>in univ.</p>
@@ -180,9 +180,12 @@
                     <img src="images/chromosome.jpg" alt="chromosome" />
                     <p class="uni__title">染色体の観察</p>
                   </div>
+                  <div class="uni__btn">
+                    <button onclick="location.href='https://www.univ.gakushuin.ac.jp/sci/bio/'" class="btn slide-bg">もっと詳しく</button>
+                  </div>
                 </div>
               </section>
-              <section class="contact-form">
+              <section class="contact-form" id="contact">
                 <div class="contact">
                   <p class="contact__title">Contact Me</p>
                   <div class="contact__inner">
@@ -213,6 +216,21 @@
                 </div>
               </section>
             </main>
+            <footer class="footer">
+              <div class="footer__logo">
+                Portfolio
+              </div>  
+              <nav class="footer__nav">
+                <ul class="footer__ul">
+                  <li class="footer__li"><a href="#lg+lib">Languages,libraries</a></li>
+                  <li class="footer__li"><a href="#experiments">Experiments</a></li>
+                  <li class="footer__li"><a href="#contact">Contact Me</a></li>
+                </ul>
+                <div class="footer__copyright">
+                  &copy; Byakko
+                </div>
+              </nav>           
+            </footer>
           </div>
         </div>
       </div>

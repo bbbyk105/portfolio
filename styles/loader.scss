@@ -20,10 +20,10 @@
 }
 
 .loader {
+  position: fixed;
   width: 60px;
   aspect-ratio: 1;
   display: grid;
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
