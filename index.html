@@ -32,7 +32,7 @@
               <div class="greet__text">
                 <span>Hi there!</span>
                 <span>My name is </span>
-                <span>Byakko Kondo</span> 
+                <span>Byakko Kondo</span>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@
                 </li>
               </ul>
             </nav>
-            <button class="mobile-menu__hamburger">
+            <button class="mobile-menu__btn">
               <span></span>
               <span></span>
               <span></span>
@@ -68,7 +68,7 @@
               </div>
             </aside>
             <main>
-              <section class="profile " id="profile">
+              <section class="profile" id="profile">
                 <div class="profile__inner">
                   <div class="profile__img cover-slide">
                     <img src="images/myphoto.JPG" alt="profile写真" />
@@ -130,7 +130,9 @@
                     </div>
                   </div>
                   <div class="languages__item">
-                    <h3 class="languages__sub-title animate-title">libraries & tools</h3>
+                    <h3 class="languages__sub-title animate-title">
+                      libraries & tools
+                    </h3>
                     <div class="languages__icons">
                       <a href="#"
                         ><img
@@ -168,23 +170,44 @@
                 </div>
                 <div class="uni__inner">
                   <div class="uni__item cover-slide">
-                    <img class="img-zoom" src="images/experiment.jpg" alt="experiment" />
+                    <img
+                      class="img-zoom"
+                      src="images/experiment.jpg"
+                      alt="experiment"
+                    />
                     <p class="uni__title">蛍光タンパク質の発現</p>
                   </div>
                   <div class="uni__item cover-slide">
-                    <img class="img-zoom" src="images/chloroplast.jpg" alt="chloroplast" />
+                    <img
+                      class="img-zoom"
+                      src="images/chloroplast.jpg"
+                      alt="chloroplast"
+                    />
                     <p class="uni__title">葉緑体の染色</p>
                   </div>
                   <div class="uni__item cover-slide">
-                    <img class="img-zoom" src="images/mitochondria.jpg" alt="mito" />
+                    <img
+                      class="img-zoom"
+                      src="images/mitochondria.jpg"
+                      alt="mito"
+                    />
                     <p class="uni__title">ミトコンドリアの染色</p>
                   </div>
                   <div class="uni__item cover-slide">
-                    <img class="img-zoom" src="images/chromosome.jpg" alt="chromosome" />
+                    <img
+                      class="img-zoom"
+                      src="images/chromosome.jpg"
+                      alt="chromosome"
+                    />
                     <p class="uni__title">染色体の観察</p>
                   </div>
                   <div class="uni__btn">
-                    <button onclick="location.href='https://www.univ.gakushuin.ac.jp/sci/bio/'" class="btn slide-bg">もっと詳しく</button>
+                    <button
+                      onclick="location.href='https://www.univ.gakushuin.ac.jp/sci/bio/'"
+                      class="btn slide-bg"
+                    >
+                      もっと詳しく
+                    </button>
                   </div>
                 </div>
               </section>
@@ -192,27 +215,44 @@
                 <div class="contact">
                   <p class="contact__title animate-title">Contact Me</p>
                   <div class="contact__inner">
-                    <form action="https://api.staticforms.xyz/submit" method="post">
-                      <input type="hidden" name="accessKey" value="1480ab28-fbe1-42bb-8602-c6af573b3a2f">
+                    <form
+                      action="https://api.staticforms.xyz/submit"
+                      method="post"
+                    >
+                      <input
+                        type="hidden"
+                        name="accessKey"
+                        value="1480ab28-fbe1-42bb-8602-c6af573b3a2f"
+                      />
 
                       <div class="contact__item">
                         <label class="label">Name</label>
-                        <input type="text" class="contact__input" name="name" required />
+                        <input
+                          type="text"
+                          class="contact__input"
+                          name="name"
+                          required
+                        />
                       </div>
-  
+
                       <div class="contact__item">
                         <label class="label">E-mail</label>
-                        <input type="email" class="contact__input" name="email" required />
+                        <input
+                          type="email"
+                          class="contact__input"
+                          name="email"
+                          required
+                        />
                       </div>
-  
+
                       <div class="contact__item">
                         <label class="label">Messages</label>
                         <textarea class="contact__inputsf"></textarea>
                       </div>
-  
+
                       <div class="contact__button">
-                        <input type="submit" value="submit">
-                        <input type="reset" value="reset">
+                        <input type="submit" value="submit" />
+                        <input type="reset" value="reset" />
                       </div>
                     </form>
                   </div>
@@ -220,28 +260,51 @@
               </section>
             </main>
             <footer class="footer">
-              <div class="footer__logo">
-                Portfolio
-              </div>  
+              <div class="footer__logo">Portfolio</div>
               <nav class="footer__nav">
                 <ul class="footer__ul">
-                  <li class="footer__li"><a href="#lg+lib">Languages,libraries</a></li>
-                  <li class="footer__li"><a href="#experiments">Experiments</a></li>
+                  <li class="footer__li">
+                    <a href="#lg+lib">Languages,libraries</a>
+                  </li>
+                  <li class="footer__li">
+                    <a href="#experiments">Experiments</a>
+                  </li>
                   <li class="footer__li"><a href="#contact">Contact Me</a></li>
                 </ul>
-                <div class="footer__copyright">
-                  &copy; Byakko
-                </div>
-              </nav>           
+                <div class="footer__copyright">&copy; Byakko</div>
+              </nav>
             </footer>
           </div>
         </div>
       </div>
+      <nav class="mobile-menu">
+        <div class="logo">
+          <span class="logo__stay">Portfolio</span>
+        </div>
+        <ul class="mobile-menu__main">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="mobile-main-title">Home</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#profile">
+              <span class="mobile-main-title">Profile</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#contact">
+              <span class="mobile-main-title">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script> -->
 
     <script type="module" src="scripts/vendors/particles.js"></script>
     <script type="module" src="scripts/vendors/app.js"></script>
+    <script src="scripts/libs/mobilemenu.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

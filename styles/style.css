@@ -115,6 +115,12 @@ img {
   color: #535353;
 }
 
+#container {
+  position: relative;
+  z-index: 10;
+  background-color: black;
+}
+
 .greet {
   position: relative;
   width: 100%;
@@ -138,6 +144,7 @@ img {
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: black;
   margin-bottom: 80px;
   position: fixed;
   top: 0;
@@ -163,6 +170,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
 }
 .header__ul {
   display: flex;
@@ -187,29 +195,6 @@ img {
 }
 .header__li > a:hover {
   color: #29c99e;
-}
-.header .mobile-menu__hamburger {
-  padding: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.header .mobile-menu__hamburger span {
-  display: block;
-  width: 30px;
-  height: 2px;
-  background-color: #29c99e;
-  margin: 7.5px 0;
-  transition: transform 0.4s ease;
-}
-.header .mobile-menu__hamburger span:nth-child(1) {
-  transform-origin: left;
-}
-.header .mobile-menu__hamburger span:nth-child(2) {
-  transform-origin: center;
-}
-.header .mobile-menu__hamburger span:nth-child(3) {
-  transform-origin: right;
 }
 
 .profile__inner {
@@ -419,6 +404,73 @@ img {
 }
 .footer__li > a:hover {
   color: #29c99e;
+}
+
+.menu-open {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu-open#content {
+  transform: translate(-200px, 60px);
+  transition: all 0.5s;
+  box-shadow: 0 20px 30px -10px rgba(255, 255, 255, 0.5);
+}
+.menu-open .mobile-menu__item {
+  transform: none;
+  opacity: 1;
+}
+
+.mobile-menu {
+  position: fixed;
+  right: 0;
+  top: 60px;
+}
+.mobile-menu__main {
+  padding: 0;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+.mobile-menu__item {
+  list-style: none;
+  display: block;
+  transform: translate3d(0, 0, -1000px);
+  padding: 0 40px;
+  transition: transform 0.3s, opacity 0.2s;
+}
+.mobile-menu__link {
+  display: block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: white;
+}
+.mobile-menu__link :hover {
+  color: #29c99e;
+}
+.mobile-menu__btn {
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+.mobile-menu__btn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #29c99e;
+  margin: 7.5px 0;
+  transition: transform 0.4s ease;
+}
+.mobile-menu__btn span:nth-child(1) {
+  transform-origin: left;
+}
+.mobile-menu__btn span:nth-child(2) {
+  transform-origin: center;
+}
+.mobile-menu__btn span:nth-child(3) {
+  transform-origin: right;
+}
+
+.mobile-main-title {
+  font-weight: 600;
+  font-size: 25px;
 }
 
 #particles-js {

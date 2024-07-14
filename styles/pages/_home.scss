@@ -1,13 +1,11 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-// *,
-// *::before,
-// *::after {
-//   padding: 0;
-//   margin: 0;
-//   box-sizing: border-box;
-// }
+#container {
+  position: relative;
+  z-index: 10;
+  background-color: $cBlack;
+}
 
 .greet {
   position: relative;
@@ -34,6 +32,7 @@
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: $cBlack;
   margin-bottom: 80px;
   position: fixed;
   top: 0;
@@ -59,6 +58,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
   }
 
   &__ul {
@@ -87,34 +87,6 @@
 
       &:hover {
         color: $cTiffany;
-      }
-    }
-  }
-
-  .mobile-menu__hamburger {
-    padding: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-
-    span {
-      display: block;
-      width: 30px;
-      height: 2px;
-      background-color: $cTiffany;
-      margin: 7.5px 0;
-      transition: transform 0.4s ease;
-
-      &:nth-child(1) {
-        transform-origin: left;
-      }
-
-      &:nth-child(2) {
-        transform-origin: center;
-      }
-
-      &:nth-child(3) {
-        transform-origin: right;
       }
     }
   }
@@ -379,4 +351,88 @@
   }
 
   
+}
+
+.menu-open {
+  background-color: rgba(0, 0, 0, 0.5);
+
+   &#content {
+    // background-color: $cTiffany;
+    transform: translate(-200px, 60px);
+    transition: all 0.5s;
+    box-shadow: 0 20px 30px -10px rgba(255, 255, 255, 0.5);
+   }
+
+   & .mobile-menu {
+    &__item {
+      transform: none;
+      opacity: 1;
+    }
+   }
+}
+
+.mobile-menu {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    // display: none;
+
+    &__main {
+      padding: 0;
+      perspective: 2000px;
+      transform-style: preserve-3d;
+    }
+
+    &__item {
+      list-style: none;
+      display: block;
+      transform: translate3d(0, 0, -1000px);
+      padding: 0 40px;
+      transition: transform 0.3s, opacity 0.2s;
+      // opacity: 0;
+    }
+
+    &__link {
+      display: block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: $cWhite;
+
+      :hover{
+        color: $cTiffany;
+      }
+    }
+
+    &__btn {
+      background-color: $cBlack;
+      border: none;
+      cursor: pointer;
+
+      span {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: $cTiffany;
+      margin: 7.5px 0;
+      transition: transform 0.4s ease;
+
+      &:nth-child(1) {
+        transform-origin: left;
+      }
+
+      &:nth-child(2) {
+        transform-origin: center;
+      }
+
+      &:nth-child(3) {
+        transform-origin: right;
+      }
+    }
+  }
+}
+
+
+.mobile-main-title{
+  font-weight: 600;
+  font-size: 25px;
 }

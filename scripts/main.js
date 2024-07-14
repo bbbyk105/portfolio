@@ -60,7 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(title);
     });
     const coverSlides = document.querySelectorAll('.cover-slide');
-            coverSlides.forEach(slide => {
-                observer.observe(slide);
-            });
+    coverSlides.forEach(slide => {
+        observer.observe(slide);
+    });
 });
+
