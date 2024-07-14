@@ -1,49 +1,77 @@
 @use "../globals/mixin" as *;
 
 .greet {
-    &__text {
-        span {
-            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-            transform: translateY(-50px);
-            opacity: 0;
-            @include animation(
-                $name: titleAnimation,
-                $duration: 3s,
-                $timing-function: ease,
-                $delay: 0.6s,
-                $iteration-count:infinite,
-                $fill-mode: forwards
-            );
+  &__text {
+    span {
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      transform: translateY(-50px);
+      opacity: 0;
+      @include animation(
+        $name: titleAnimation,
+        $duration: 3s,
+        $timing-function: ease,
+        $delay: 0.6s,
+        $iteration-count: infinite,
+        $fill-mode: forwards
+      );
 
-            &:first-child {
-                animation-delay: 0.7s;
-            }
-            &:last-child {
-                animation-delay: 0.5s;
-            }
-        }
+      &:first-child {
+        animation-delay: 0.7s;
+      }
+      &:last-child {
+        animation-delay: 0.5s;
+      }
     }
+  }
 }
 
 @keyframes titleAnimation {
-    0% {
-        transform: translateY(-50px);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-        opacity: 0;
+  0% {
+    transform: translateY(-50px);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(0px);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0px);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+    opacity: 0;
+  }
+}
+
+
+
+.animate-title .inview .char {
+  @include animation(
+    $name: chars-animation,
+    $duration: 0.5s,
+    $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
+    $fill-mode: both
+  );
+
+  @for $i from 1 through 15 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * 0.04s;
     }
-    20% {
-        transform: translateY(0px);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-        opacity: 1;
-    }
-    80% {
-        transform: translateY(0px);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(50px);
-        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
-        opacity: 0;
-    }
+  }
+}
+
+@keyframes chars-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
