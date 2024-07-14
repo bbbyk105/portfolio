@@ -493,6 +493,49 @@ img {
   font-size: 25px;
 }
 
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+}
+.side__inner {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  width: 25px;
+  height: auto;
+}
+.side__inner a {
+  padding-top: 100px;
+}
+@media screen and (min-width: 1280px) {
+  .side {
+    display: block;
+  }
+}
+.side.left {
+  left: 50px;
+}
+
+.icon {
+  position: relative;
+}
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: -20px;
+  width: 2em;
+  height: 2em;
+  background-position: center;
+  background-repeat: none;
+  background-size: contain;
+}
+.icon.github::before {
+  background-image: url(../../images/icons8-github.svg);
+  background-color: #29c99e;
+}
+
 #particles-js {
   top: 0;
   left: 0;
