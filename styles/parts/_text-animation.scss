@@ -48,23 +48,6 @@
   }
 }
 
-// .animate-title{
-//   opacity: 0;
-
-//   &.inview {
-//     opacity: 1;
-
-//     & .char {
-//       display: inline-block;
-//     }
-//   }
-
-//   & .char {
-//     opacity: 0;
-//   }
-// }
-
-
 .animate-title {
 
   &.inview {
@@ -82,7 +65,7 @@
 
       @for $i from 1 through 45 {
           &:nth-child(#{$i}) {
-              animation-delay: $i * 0.04s;
+              animation-delay: $i * 0.05s;
           }
       }
     }

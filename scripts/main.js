@@ -59,4 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
     animatedTitles.forEach(title => {
         observer.observe(title);
     });
+    const coverSlides = document.querySelectorAll('.cover-slide');
+            coverSlides.forEach(slide => {
+                observer.observe(slide);
+            });
 });
