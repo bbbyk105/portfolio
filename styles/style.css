@@ -411,6 +411,9 @@ img {
   right: 0;
   top: 60px;
 }
+.mobile-menu__main.visible {
+  display: block;
+}
 .mobile-menu__cover {
   position: absolute;
   top: 0;
@@ -421,11 +424,13 @@ img {
   opacity: 0;
   visibility: hidden;
   z-index: 1;
+  cursor: pointer;
 }
 .mobile-menu__main {
   padding: 0;
   perspective: 2000px;
   transform-style: preserve-3d;
+  display: none;
 }
 .mobile-menu__item {
   list-style: none;
@@ -478,6 +483,9 @@ img {
 }
 .menu-open .mobile-menu__item {
   transform: none;
+}
+.menu-open .mobile-menu > span {
+  display: block;
 }
 
 .mobile-main-title {

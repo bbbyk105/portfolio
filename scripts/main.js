@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Headerのクラスの付与
-    const header = document.querySelector("header");
+    const header = document.querySelector("header"); 
     const particle = document.getElementById("particles-js");
 
     const headerObserverCallback = function (entries, observer) {
@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const headerObserver = new IntersectionObserver(headerObserverCallback);
     headerObserver.observe(particle);
+
+
 
     // TextAnimationクラスの定義
     class TextAnimation {

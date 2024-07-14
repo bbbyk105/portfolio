@@ -358,7 +358,12 @@
   position: fixed;
   right: 0;
   top: 60px;
-  // display: none;
+
+  &__main{
+    &.visible{
+      display: block;
+    }
+  }
 
   &__cover {
     position: absolute;
@@ -370,12 +375,14 @@
     opacity: 0;
     visibility: hidden;
     z-index: 1; 
+    cursor: pointer;
   }
 
   &__main {
     padding: 0;
     perspective: 2000px;
     transform-style: preserve-3d;
+    display: none;
   }
 
   &__item {
@@ -435,6 +442,7 @@
    }
 
    & .mobile-menu {
+
     &__cover {
       opacity: 1;
       visibility: visible;
@@ -443,13 +451,16 @@
     &__item {
       transform: none;
     }
+    & > span {
+      display: block;
+    }
    }
 }
-
-
-
 
 .mobile-main-title{
   font-weight: 600;
   font-size: 25px;
+  // display: none;
 }
+
+
