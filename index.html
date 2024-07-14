@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Byakko's Portfolio</title>
     <script src="scripts/vendors/pace.js"></script>
-    <script src="scripts/libs/text-animation.js"></script>
     <link rel="stylesheet" href="styles/loader.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +29,11 @@
         <div id="particles-js">
           <div class="greet">
             <div class="greet__inner">
-              <div class="greet__text">hello my name is Byakko Kondo</div>
+              <div class="greet__text">
+                <span>Hi there!</span>
+                <span>My name is </span>
+                <span>Byakko Kondo</span>
+              </div>
             </div>
           </div>
         </div>
@@ -50,7 +53,7 @@
                 </li>
               </ul>
             </nav>
-            <button class="mobile-menu__hamburger">
+            <button class="mobile-menu__btn">
               <span></span>
               <span></span>
               <span></span>
@@ -58,21 +61,24 @@
           </div>
         </header>
         <div id="content">
+          <div class="mobile-menu__cover"></div>
           <div id="main-content">
             <aside class="side left">
               <div class="side__inner">
-                <a href=""></a>
+                <a href="#" class="github icon">github</a>
+                <a href="#" class="qiita icon">qiita</a>
+                <a href="#" class="linkedin icon">linkedin</a>
               </div>
             </aside>
             <main>
               <section class="profile" id="profile">
                 <div class="profile__inner">
-                  <div class="profile__img">
+                  <div class="profile__img cover-slide">
                     <img src="images/myphoto.JPG" alt="profile写真" />
                   </div>
                   <div class="profile__texts">
                     <div class="profile__texts-inner">
-                      <div class="profile__title main-title">
+                      <div class="profile__title main-title animate-title">
                         <span>Profile</span>
                       </div>
                       <div class="profile__description">
@@ -97,11 +103,11 @@
               </section>
               <section class="languages" id="lg+lib">
                 <div class="languages__title">
-                  <h1>Languages, libraries</h1>
+                  <h1 class="animate-title">Languages, libraries</h1>
                 </div>
                 <div class="languages__inner">
                   <div class="languages__item">
-                    <h3 class="languages__sub-title">Frontend</h3>
+                    <h3 class="languages__sub-title animate-title">Frontend</h3>
                     <div class="languages__icons">
                       <a href="#"
                         ><img
@@ -127,7 +133,9 @@
                     </div>
                   </div>
                   <div class="languages__item">
-                    <h3 class="languages__sub-title">libraries & tools</h3>
+                    <h3 class="languages__sub-title animate-title">
+                      libraries & tools
+                    </h3>
                     <div class="languages__icons">
                       <a href="#"
                         ><img
@@ -160,56 +168,94 @@
               </section>
               <section class="uni" id="experiments">
                 <div class="" uni__title>
-                  <h2 class="uni__main-title">Experiments</h2>
-                  <p>in univ.</p>
+                  <h2 class="uni__main-title animate-title">Experiments</h2>
+                  <p class="animate-title">in univ.</p>
                 </div>
                 <div class="uni__inner">
-                  <div class="uni__item">
-                    <img src="images/experiment.jpg" alt="experiment" />
+                  <div class="uni__item cover-slide">
+                    <img
+                      class="img-zoom"
+                      src="images/experiment.jpg"
+                      alt="experiment"
+                    />
                     <p class="uni__title">蛍光タンパク質の発現</p>
                   </div>
-                  <div class="uni__item">
-                    <img src="images/chloroplast.jpg" alt="chloroplast" />
+                  <div class="uni__item cover-slide">
+                    <img
+                      class="img-zoom"
+                      src="images/chloroplast.jpg"
+                      alt="chloroplast"
+                    />
                     <p class="uni__title">葉緑体の染色</p>
                   </div>
-                  <div class="uni__item">
-                    <img src="images/mitochondria.jpg" alt="mito" />
+                  <div class="uni__item cover-slide">
+                    <img
+                      class="img-zoom"
+                      src="images/mitochondria.jpg"
+                      alt="mito"
+                    />
                     <p class="uni__title">ミトコンドリアの染色</p>
                   </div>
-                  <div class="uni__item">
-                    <img src="images/chromosome.jpg" alt="chromosome" />
+                  <div class="uni__item cover-slide">
+                    <img
+                      class="img-zoom"
+                      src="images/chromosome.jpg"
+                      alt="chromosome"
+                    />
                     <p class="uni__title">染色体の観察</p>
                   </div>
                   <div class="uni__btn">
-                    <button onclick="location.href='https://www.univ.gakushuin.ac.jp/sci/bio/'" class="btn slide-bg">もっと詳しく</button>
+                    <button
+                      onclick="location.href='https://www.univ.gakushuin.ac.jp/sci/bio/'"
+                      class="btn slide-bg"
+                    >
+                      もっと詳しく
+                    </button>
                   </div>
                 </div>
               </section>
               <section class="contact-form" id="contact">
                 <div class="contact">
-                  <p class="contact__title">Contact Me</p>
+                  <p class="contact__title animate-title">Contact Me</p>
                   <div class="contact__inner">
-                    <form action="https://api.staticforms.xyz/submit" method="post">
-                      <input type="hidden" name="accessKey" value="1480ab28-fbe1-42bb-8602-c6af573b3a2f">
+                    <form
+                      action="https://api.staticforms.xyz/submit"
+                      method="post"
+                    >
+                      <input
+                        type="hidden"
+                        name="accessKey"
+                        value="1480ab28-fbe1-42bb-8602-c6af573b3a2f"
+                      />
 
                       <div class="contact__item">
                         <label class="label">Name</label>
-                        <input type="text" class="contact__input" name="name" required />
+                        <input
+                          type="text"
+                          class="contact__input"
+                          name="name"
+                          required
+                        />
                       </div>
-  
+
                       <div class="contact__item">
                         <label class="label">E-mail</label>
-                        <input type="email" class="contact__input" name="email" required />
+                        <input
+                          type="email"
+                          class="contact__input"
+                          name="email"
+                          required
+                        />
                       </div>
-  
+
                       <div class="contact__item">
                         <label class="label">Messages</label>
                         <textarea class="contact__inputsf"></textarea>
                       </div>
-  
+
                       <div class="contact__button">
-                        <input type="submit" value="submit">
-                        <input type="reset" value="reset">
+                        <input type="submit" value="submit" />
+                        <input type="reset" value="reset" />
                       </div>
                     </form>
                   </div>
@@ -217,32 +263,48 @@
               </section>
             </main>
             <footer class="footer">
-              <div class="footer__logo">
-                Portfolio
-              </div>  
+              <div class="footer__logo">Portfolio</div>
               <nav class="footer__nav">
                 <ul class="footer__ul">
-                  <li class="footer__li"><a href="#lg+lib">Languages,libraries</a></li>
-                  <li class="footer__li"><a href="#experiments">Experiments</a></li>
+                  <li class="footer__li">
+                    <a href="#lg+lib">Languages,libraries</a>
+                  </li>
+                  <li class="footer__li">
+                    <a href="#experiments">Experiments</a>
+                  </li>
                   <li class="footer__li"><a href="#contact">Contact Me</a></li>
                 </ul>
-                <div class="footer__copyright">
-                  &copy; Byakko
-                </div>
-              </nav>           
+                <div class="footer__copyright">&copy; Byakko</div>
+              </nav>
             </footer>
           </div>
         </div>
       </div>
+      <nav class="mobile-menu">
+        <ul class="mobile-menu__main">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="mobile-main-title">Home</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#profile">
+              <span class="mobile-main-title">Profile</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#contact">
+              <span class="mobile-main-title">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script> -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
 
-    <script type="module" src="scripts/libs/particles.js"></script>
-    <script type="module" src="scripts/libs/app.js"></script>
+    <script type="module" src="scripts/vendors/particles.js"></script>
+    <script type="module" src="scripts/vendors/app.js"></script>
+    <script src="scripts/libs/mobilemenu.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>
