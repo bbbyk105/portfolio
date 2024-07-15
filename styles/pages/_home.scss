@@ -1,6 +1,7 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
+
 #container {
   position: relative;
   z-index: 10;
@@ -43,6 +44,7 @@
   &.hidden {
     display: none;
   }
+  
 
   &__nav {
     display: none;
@@ -505,6 +507,12 @@
   }
 
   &.github::before {
+    background-image: url(../../images/icons8-github.svg);
+    
+    background-color: $cTiffany;
+  }
+
+  &.qiita::before {
     background-image: url(../../images/icons8-github.svg);
     background-color: $cTiffany;
   }
