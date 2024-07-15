@@ -17,15 +17,35 @@ class MobileMenu {
     _toggle() {
         this.DOM.container.classList.toggle("menu-open");
         this.DOM.mobile.classList.toggle("visible");
+        document.body.classList.toggle("no-scroll");
+
+        if (document.body.classList.contains("no-scroll")) {
+            this._disableScroll();
+        } else {
+            this._enableScroll();
+        }
     }
 
-    
+    _disableScroll() {
+        document.addEventListener('touchmove', this._noscroll, { passive: false });
+        document.addEventListener('wheel', this._noscroll, { passive: false });
+    }
+
+    _enableScroll() {
+        document.removeEventListener('touchmove', this._noscroll);
+        document.removeEventListener('wheel', this._noscroll);
+    }
+
+    _noscroll(e) {
+        e.preventDefault();
+    }
 
     _addEvent() {
-        this.DOM.btn.addEventListener("click", this._toggle.bind(this));
-        this.DOM.cover.addEventListener("click", this._toggle.bind(this));
-
+        this.DOM.btn.addEventListener(this.eventType, this._toggle.bind(this));
+        this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
     }
 }
 
-new MobileMenu();
+document.addEventListener("DOMContentLoaded", () => {
+    new MobileMenu();
+});
